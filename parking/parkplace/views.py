@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .models import Place
+from .models import *
 from .serializers import placeSerializer
 
 class Get_place_List(APIView):
@@ -12,4 +12,7 @@ class Get_place_List(APIView):
 
 def index(request):
     return render (request, 'index.html',{'list':list})
- 
+
+def brone(request):
+    return render (request, 'brone.html')
+
